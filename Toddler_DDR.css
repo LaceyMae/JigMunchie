@@ -1,0 +1,48 @@
+#arrows{
+    fill: #FF00D4;
+}
+
+svg{
+    width:30%; height:auto;
+    display: inline-block;
+    overflow: visible;
+    position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
+
+.arrowDown{
+    -webkit-transform: rotate(0deg) translate(25%);
+  -moz-transform: rotate(0deg) translate(25%);
+  -o-transform: rotate(0deg) translate(25%);
+  -ms-transform: rotate(0deg) translate(25%);
+  transform: rotate(0deg) translate(25%);
+    transform-origin: center;
+}
+
+.arrowLeft{
+    -webkit-transform: rotate(90deg) translate(25%);
+  -moz-transform: rotate(90deg) translate(25%);
+  -o-transform: rotate(90deg) translate(25%);
+  -ms-transform: rotate(90deg) translate(25%);
+  transform: rotate(90deg) translate(25%);
+    transform-origin: center;
+}
+
+ .arrowRight{
+    -webkit-transform: rotate(-90deg) translate(25%);
+  -moz-transform: rotate(-90deg) translate(25%);
+  -o-transform: rotate(-90deg) translate(25%);
+  -ms-transform: rotate(-90deg) translate(25%);
+  transform: rotate(-90deg) translate(25%);
+    transform-origin: center;
+}
+
+.arrowUp{
+   -webkit-transform: rotate(180deg) translate(25%);
+  -moz-transform: rotate(180deg) translate(25%);
+  -o-transform: rotate(180deg) translate(25%);
+  -ms-transform: rotate(180deg) translate(25%);
+  transform: rotate(180deg) translate(25%);
+    transform-origin: center;
+}
