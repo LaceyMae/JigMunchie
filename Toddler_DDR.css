@@ -3,15 +3,16 @@
 }
 
 svg{
-    width:30%; height:auto;
-    display: inline-block;
+    width:250px; height:auto;
+    display: block;
     overflow: visible;
-    position: fixed; /* or absolute */
+    
+    margin: auto;
   top: 50%;
   left: 50%;
 }
 
-.arrowDown{
+#arrowDown{
     -webkit-transform: rotate(0deg) translate(25%);
   -moz-transform: rotate(0deg) translate(25%);
   -o-transform: rotate(0deg) translate(25%);
@@ -20,7 +21,7 @@ svg{
     transform-origin: center;
 }
 
-.arrowLeft{
+#arrowLeft{
     -webkit-transform: rotate(90deg) translate(25%);
   -moz-transform: rotate(90deg) translate(25%);
   -o-transform: rotate(90deg) translate(25%);
@@ -29,7 +30,7 @@ svg{
     transform-origin: center;
 }
 
- .arrowRight{
+ #arrowRight{
     -webkit-transform: rotate(-90deg) translate(25%);
   -moz-transform: rotate(-90deg) translate(25%);
   -o-transform: rotate(-90deg) translate(25%);
@@ -38,7 +39,7 @@ svg{
     transform-origin: center;
 }
 
-.arrowUp{
+#arrowUp{
    -webkit-transform: rotate(180deg) translate(25%);
   -moz-transform: rotate(180deg) translate(25%);
   -o-transform: rotate(180deg) translate(25%);
