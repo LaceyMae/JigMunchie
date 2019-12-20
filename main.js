@@ -1,50 +1,117 @@
-let good;
-let order = [];
-let win;
+var good;
 
-const upArrow = document.querySelector("#arrowUp");
-const downArrow = document.querySelector("#arrowDown");
-const leftArrow = document.querySelector("#arrowLeft");
-const rightArrow = document.querySelector("#arrowRight");
+var UpPress = document.getElementById("UpBtn");
+var DownPress = document.getElementById("DownBtn");
+var LeftPress = document.getElementById("LeftBtn");
+var RightPress = document.getElementById("RightBtn");
 
-function play() {
-    win = false;
-    order = [];
-    for (var i = 0; i < 20; i++){
-        order.push(Math.floor(Math.random() * 4) * 1);
+var arrowBox = document.getElementById("arrowContainer");
+
+var arrows = [UpPress, DownPress, LeftPress, RightPress];
+
+
+ UpPress.classList.add('hide');
+ DownPress.classList.add('hide');
+ LeftPress.classList.add('hide');
+RightPress.classList.add('hide');
+
+
+let random = Math.floor(Math.random()*arrows.length)
+console.log(arrows[random]);
+
+var randArrows = (arrows[random]);
+startGame();
+
+function startGame(){
+    if (randArrows == DownPress){
+        DownPress.classList.remove('hide');
     }
-}
+        else if (randArrows == UpPress){
+            UpPress.classList.remove('hide');
+        }
+            else if (randArrows == LeftPress){
+                LeftPress.classList.remove('hide');
+            }
+                else if (randArrows == RightPress){
+                    RightPress.classList.remove('hide');
+    }
 
-if (compTurn){{
- if (order == 1) one();
- if (order == 2) two();
- if (order == 3) three();
- if (order == 4) four();
-}
+ }
 
-compTurn();
-upArrow.addEventListener('click', (event) => {
-    // check();
-    one();
-    // if(!win) {
-    //     document.getElementById("alertMsg").innerHTML = "Incorrect";
-    // }
-})
+ document.onkeydown = function(e) {
+    if(e.keyCode == 38 && randArrows == UpPress){
+        alert("yay"); }
+        
+        else if(e.keyCode != 38 && randArrows == UpPress){
+          alert("boo");
+          }  
+    }
 
+    document.onkeydown = function(e) {
+        if(e.keyCode == 40 && randArrows == DownPress){
+            alert("yay"); }
+            
+            else if(e.keyCode != 40 && randArrows == DownPress){
+              alert("boo");
+              }  
+        }
 
+document.onkeydown = function(e) {
+    if(e.keyCode == 37 && randArrows == LeftPress){
+        alert("yay"); }
+        
+        else if(e.keyCode != 37 && randArrows == LeftPress){
+          alert("boo");
+          }  
+    }
 
-function check(){
+    document.onkeydown = function(e) {
+        if(e.keyCode == 39 && randArrows == RightPress){
+            alert("yay"); }
+            
+            else if(e.keyCode != 39 && randArrows == RightPress){
+              alert("boo");
+              }  
+        }
 
-    if (playerArrow[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
-    good = false;
-
-    if (playerOrder.length == 20 && good){
-        winGame();
+//  document.onkeydown = function(e) {
+//     switch(e.keyCode){
+//     case Up:
+//     if(e.keyCode == 38 && randArrows == UpPress){
+//         alert("yay"); }
+        
+//         else if(e.keyCode != 38 && randArrows == UpPress){
+//           alert("boo");
+//           }  break;
     
-    }
+    
 
-    if (good == false) {
-        document.getElementById("alertMsg").innerHTML = "Incorrect";
-    })
+//     case 40:
+//         if(e.keyCode == 40 && randArrows == DownPress){
+//             alert("yay"); }
+            
+//             else if(e.keyCode != 40 && randArrows == DownPress){
+//               alert("boo");
+//               }  
+//         break;
 
-}
+// case 37:
+//     if(e.keyCode == 37 && randArrows == LeftPress){
+//         alert("yay"); }
+        
+//         else if(e.keyCode != 37 && randArrows == LeftPress){
+//           alert("boo");
+//           }  
+//     break;
+
+//   case 39:
+//         if(e.keyCode == 39 && randArrows == RightPress){
+//             alert("yay"); }
+            
+//             else if(e.keyCode != 39 && randArrows == RightPress){
+//               alert("boo");
+//               }  
+//     break;
+// };}
+
+
